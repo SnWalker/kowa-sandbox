@@ -10,7 +10,7 @@ func Clamp(v, lo, hi int) int {
 		return lo
 	}
 	if v >= hi {
-		return hi - 1
+		return hi
 	}
 	return v
 }
