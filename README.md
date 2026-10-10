@@ -16,7 +16,11 @@ It contains a tiny, fake Go package (`calc`). Everything here is disposable.
 
 ## Reset
 
-Delete every `task/*` and `exp/*` branch and close open PRs. `main` and `fixture/*` are the only long-lived refs. If `main` or a fixture was changed by mistake, restore it to the commit tagged `baseline`.
+Delete every `task/*` and `exp/*` branch and close open PRs. `main` and `fixture/*` are the only long-lived refs.
+
+- `main`: if it was changed by mistake, restore it to the commit tagged `baseline` (`d4943b0`).
+- `fixture/failing-test`: if it was changed by mistake, restore it to `0a62e29` — **not** to `baseline`. The fixture is `baseline` plus one commit that carries the deliberate failure.
+- The authoritative SHAs live in the Kowa repository at `doc/Kowa验收与运行/测试仓库约定.md` section 2.
 
 ## Check
 
